@@ -1,0 +1,259 @@
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  outline: 0;
+}
+
+$primary-color: #164b84;
+$secondary-color: #5ac7e7;
+
+// Footer SCSS
+
+footer {
+  margin-top: 180px;
+  width: 100%;
+  background: #f5f5f5;
+
+  .header {
+    display: flex;
+    justify-content: center;
+
+    .wrapper {
+      width: 960px;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.24);
+      border-radius: 10px;
+      margin-top: -60px;
+
+      .box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .img {
+          width: 70px;
+          height: 70px;
+          background: $primary-color;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .main-footer {
+    padding: 180px 90px 70px 90px;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .first-col {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+
+      .social {
+        width: 75%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .second-col {
+      flex: 1;
+      margin-left: 70px;
+      min-width: fit-content;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .third-col {
+      width: 369px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+
+      p {
+        width: 85%;
+      }
+
+      .inp {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        input {
+          flex: 1;
+          font-size: 16px;
+          color: #fff;
+          background: transparent;
+          border: 0;
+
+          &::placeholder {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    width: 100%;
+    padding: 0 90px;
+
+    div {
+      padding: 10px 0;
+      width: 100%;
+      border-top: 2px solid $primary-color;
+      text-align: center;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  footer {
+    .main-footer {
+      gap: 2rem;
+      .second-col {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    .main-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .second-col {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  footer {
+    .main-footer {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+
+      .first-col {
+        width: 100%;
+      }
+
+      .second-col {
+        width: 100%;
+      }
+
+      .third-col {
+        width: 100%;
+      }
+    }
+
+    .copyright {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  footer {
+    .main-footer {
+      padding: 180px 50px 70px 50px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  footer {
+    .main-footer {
+      padding: 180px 30px 70px 30px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  footer {
+    .header {
+      .wrapper {
+        width: 80%;
+      }
+    }
+  }
+}
+@media (max-width: 830px) {
+  footer {
+    .header {
+      .wrapper {
+        width: 90%;
+      }
+    }
+  }
+}
+@media (max-width: 745px) {
+  footer {
+    .header {
+      .wrapper {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .line {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  footer {
+    .header {
+      .wrapper {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
